@@ -2,3 +2,4 @@
 /.venv
 *.pptx
 /.vscode
+*.db
