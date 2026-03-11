@@ -70,7 +70,7 @@ def get_pie_chart(entered_site):
             names='Launch Site', 
             title='Success Comparison')
     else:
-        counts_df = spacex_df["class"].value_counts().reset_index()
+        counts_df = spacex_df[spacex_df["Launch Site"] == entered_site]["class"].value_counts().reset_index()
         counts_df.columns = ['class', 'count']
         fig = px.pie(
             counts_df, 
